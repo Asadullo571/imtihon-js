@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IMthon</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a class="logo" href="#home"><img src="./assets/Logo.svg" alt="" /></a>
+
+        <nav class="nav" id="nav">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="#home">Главная</a></li>
+            <li><a class="nav__link" href="#club">О клубе</a></li>
+            <li><a class="nav__link" href="#">Турниры</a></li>
+            <li><a class="nav__link" href="#services">Услуги</a></li>
+            <li><a class="nav__link" href="#">Детский теннис</a></li>
+            <li><a class="nav__link" href="#">Галерея</a></li>
+            <li><a class="nav__link" href="#prices">Цены</a></li>
+            <li><a class="nav__link" href="#contacts">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__tools">
+          <button class="icon-btn" id="searchBtn">🔍</button>
+
+          <div class="clock">
+            <span class="clock__time" id="clockTime">00:00:00</span>
+            <span class="clock__date" id="clockDate"></span>
+          </div>
+
+          <button class="icon-btn theme-toggle" id="themeBtn">
+            <span class="icon--moon">🌙</span>
+            <span class="icon--sun">☀️</span>
+          </button>
+
+          <ul class="socials socials--header">
+            <li><a href="#">Yt</a></li>
+            <li><a href="#">W</a></li>
+          </ul>
+
+          <button class="icon-btn burger" id="burger"></button>
+        </div>
+      </div>
+
+      <div class="search-bar" id="searchBar" hidden>
+        <div class="container search-bar__inner">
+          <input
+            class="search-bar__input"
+            id="searchInput"
+            type="search"
+            placeholder="Поиск..."
+          />
+          <span class="search-bar__status" id="searchStatus"></span>
+          <button class="icon-btn" id="searchClose">✕</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <img class="hero__bg" src="./assets/Rectangle 26.svg" alt="" />
+
+        <div class="container hero__inner">
+          <div class="hero__intro">
+            <h1 class="hero__title">
+              <span>Петербургский</span>
+              <span>теннисный клуб</span>
+              <span>имени М.А. Пасечникова</span>
+            </h1>
+
+            <button class="play">
+              <span class="play__icon"><span class="icon">▶</span></span>
+              <span class="play__text"
+                >Посмотрите видео<br />о нашем клубе</span
+              >
+            </button>
+          </div>
+
+          <ul class="quick-links">
+            <li>
+              <a class="quick-link" href="#services">
+                <span>
+                  <span class="quick-link__label">Услуги</span>
+                  <span class="quick-link__title">Аренда корта</span>
+                </span>
+                <span class="icon">↗</span>
+              </a>
+            </li>
+            <li>
+              <a class="quick-link" href="#services">
+                <span>
+                  <span class="quick-link__label">Услуги</span>
+                  <span class="quick-link__title">Детский теннис</span>
+                </span>
+                <span class="icon">↗</span>
+              </a>
+            </li>
+            <li>
+              <a class="quick-link" href="#services">
+                <span>
+                  <span class="quick-link__label">Услуги</span>
+                  <span class="quick-link__title">Сборы команд</span>
+                </span>
+                <span class="icon">↗</span>
+              </a>
+            </li>
+            <li>
+              <a class="quick-link" href="#">
+                <span>
+                  <span class="quick-link__label">Турниры</span>
+                  <span class="quick-link__title">Расписание</span>
+                </span>
+                <span class="icon">↗</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section search-section" id="courts">
+        <div class="container">
+          <ul class="courts">
+            <li class="card court-card searchable">
+              <div class="card__media court-card__media">
+                <img src="./assets/Rectangle 39.svg" alt="" />
+                <h2 class="card__title card__title--center">
+                  5 летних<br />грунтовых кортов
+                </h2>
+                <button class="like-btn" data-id="court-1">
+                  <span class="icon">♥</span>
+                </button>
+              </div>
+            </li>
+
+            <li class="card court-card searchable">
+              <div class="card__media court-card__media">
+                <img src="./assets/Rectangle 39.svg" alt="" />
+                <h2 class="card__title card__title--center">
+                  Зал с покрытием<br />“Искусственная трава”
+                </h2>
+                <button class="like-btn" data-id="court-2">
+                  <span class="icon">♥</span>
+                </button>
+              </div>
+            </li>
+
+            <li class="card court-card searchable">
+              <div class="card__media court-card__media">
+                <img src="./assets/Rectangle 39.svg" alt="" />
+                <h2 class="card__title card__title--center">
+                  Зал с покрытием<br />“Хард”
+                </h2>
+                <button class="like-btn" data-id="court-3">
+                  <span class="icon">♥</span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section club" id="club">
+        <div class="container club__inner">
+          <img class="club__image" src="./assets/Rectangle 45.svg" alt="" />
+
+          <div class="club__body">
+            <h2 class="section__title">Спортивный клуб</h2>
+
+            <p>
+              Imperdiet lorem ipsum, pulvinar aliquet sit ultricies in sit
+              turpis. Ultricies erat pretium risus quam tincidunt non viverra
+              porttitor. Sollicitudin enim nunc in nisi donec vel. Blandit
+              mauris vitae amet aliquet ultrices mauris pellentesque. Non ipsum
+              commodo, sit mi sit netus aenean nisl. Donec sit pellentesque
+              enim, vestibulum.
+            </p>
+            <p>
+              Condimentum hac adipiscing purus in augue nisi. Convallis ut nisi.
+            </p>
+
+            <h3 class="club__subtitle">Ornare orci ut dictum nulla fames.</h3>
+
+            <ul class="club__list">
+              <li>
+                Euismod diam, vel venenatis bibendum sodales sem hendrerit
+                vulputate sagittis.
+              </li>
+              <li>
+                Nisl senectus sed malesuada donec. Interdum malesuada bibendum
+                imperdiet elementum auctor vitae in.
+              </li>
+              <li>
+                Quam purus ornare dictum pharetra. Sed viverra tellus
+                sollicitudin urna, sagittis.
+              </li>
+              <li>
+                Scelerisque urna senectus commodo, nam. Donec nibh tempus
+                imperdiet nisi, tincidunt mus egestas nisl nullam.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section search-section" id="trainers">
+        <div class="container slider">
+          <div class="section__head">
+            <h2 class="section__title">Тренерский состав</h2>
+
+            <div class="slider__controls">
+              <button class="link-btn slider__toggle">Show all...</button>
+              <div class="slider__arrows">
+                <button class="btn-arrow slider__prev">←</button>
+                <button class="btn-arrow slider__next">→</button>
+              </div>
+            </div>
+          </div>
+
+          <ul class="slider__track trainers">
+            <li class="card trainer searchable">
+              <div class="card__media trainer__media">
+                <img src="././assets/Rectangle 39 (3).svg" alt="" />
+                <button class="like-btn like-btn--small" data-id="trainer-1">
+                  <span class="icon">♥</span>
+                </button>
+              </div>
+              <h3 class="trainer__name">Pulvinar aliquam</h3>
+              <p class="trainer__text">
+                Arcu elit massa amet turpis vel consequat pellentesque sit.
+              </p>
+            </li>
+
+            <li class="card trainer searchable">
+              <div class="card__media trainer__media">
+                <img src="./assets/Rectangle 39 (3).svg" alt="" />
+                <button class="like-btn like-btn--small" data-id="trainer-2">
+                  <span class="icon">♥</span>
+                </button>
+              </div>
+              <h3 class="trainer__name">Pretium odio</h3>
+              <p class="trainer__text">
+                Bibendum aliquam volutpat nisl a duis in nisi. In sed commodo
+                lorem morbi quis.
+              </p>
+            </li>
+
+            <li class="card trainer searchable">
+              <div class="card__media trainer__media">
+                <img src="./assets/Rectangle 39 (3).svg" alt="" />
+                <button class="like-btn like-btn--small" data-id="trainer-3">
+                  <span class="icon">♥</span>
+                </button>
+              </div>
+              <h3 class="trainer__name">Aliquet consectetur</h3>
+              <p class="trainer__text">
+                Id sapien sed nibh fermentum massa posuere ipsum. Diam in.
+              </p>
+            </li>
+
+            <li class="card trainer searchable">
+              <div class="card__media trainer__media">
+                <img src="./assets/Rectangle 39 (3).svg" alt="" />
+                <button class="like-btn like-btn--small" data-id="trainer-4">
+                  <span class="icon">♥</span>
+                </button>
+              </div>
+              <h3 class="trainer__name">Blandit augue</h3>
+              <p class="trainer__text">
+                Scelerisque accumsan pretium justo, vitae elit. Dolor semper
+                morbi sit auctor vel diam eros.
+              </p>
+            </li>
+
+            <li class="card trainer searchable">
+              <div class="card__media trainer__media">
+                <img src="./assets/Rectangle 39 (3).svg" alt="" />
+                <button class="like-btn like-btn--small" data-id="trainer-5">
+                  <span class="icon">♥</span>
+                </button>
+              </div>
+              <h3 class="trainer__name">Lorem lacus</h3>
+              <p class="trainer__text">
+                Adipiscing amet, viverra dignissim egestas. Sed nibh egestas
+                venenatis faucibus.
+              </p>
+            </li>
+
+            <li class="card trainer searchable">
+              <div class="card__media trainer__media">
+                <img src="./assets/Rectangle 39 (3).svg" alt="" />
+                <button class="like-btn like-btn--small" data-id="trainer-6">
+                  <span class="icon">♥</span>
+                </button>
+              </div>
+              <h3 class="trainer__name">Sed erat</h3>
+              <p class="trainer__text">
+                Quis ullamcorper pretium lacus risus tellus dolor etiam.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container split">
+          <div class="search-section" id="prices">
+            <h2 class="section__title">Цены и абонементы</h2>
+
+            <div class="prices">
+              <details class="price searchable">
+                <summary class="price__summary">Зимний сезон 2021-2022</summary>
+              </details>
+
+              <details class="price searchable">
+                <summary class="price__summary">Абонементы</summary>
+              </details>
+
+              <details class="price searchable">
+                <summary class="price__summary">Скидки</summary>
+              </details>
+
+              <details class="price searchable">
+                <summary class="price__summary">Дополнительные услуги</summary>
+              </details>
+            </div>
+          </div>
+
+          <div class="search-section" id="services">
+            <div class="slider">
+              <div class="section__head">
+                <h2 class="section__title">Услуги</h2>
+
+                <div class="slider__controls">
+                  <button class="link-btn slider__toggle">Show all</button>
+                  <div class="slider__arrows">
+                    <button class="btn-arrow slider__prev">←</button>
+                    <button class="btn-arrow slider__next">→</button>
+                  </div>
+                </div>
+              </div>
+
+              <ul class="slider__track services">
+                <li class="card service-card searchable">
+                  <div class="card__media service-card__media">
+                    <img src="./assets/kofe.svg" alt="" />
+                    <h3 class="card__title card__title--left">Уютное кафе</h3>
+                    <button class="like-btn" data-id="service-1">
+                      <span class="icon">♥</span>
+                    </button>
+                  </div>
+                </li>
+
+                <li class="card service-card searchable">
+                  <div class="card__media service-card__media">
+                    <img
+                      class="service-card__image--low"
+                      src="./assets/kofe.svg"
+                      alt=""
+                    />
+                    <h3 class="card__title card__title--left">Lorem, ipsum.</h3>
+                    <button class="like-btn" data-id="service-4">
+                      <span class="icon">♥</span>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contacts">
+      <div class="container footer__inner">
+        <p class="footer__copy">
+          <span id="year">2022</span> © Все права защищены.
+        </p>
+
+        <ul class="footer__nav">
+          <li><a href="#home">Главная</a></li>
+          <li><a href="#club">О клубе</a></li>
+          <li><a href="#">Турниры</a></li>
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#">Детский теннис</a></li>
+          <li><a href="#">Галерея</a></li>
+          <li><a href="#prices">Цены</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+
+        <ul class="socials">
+          <li><a href="#">yt</a></li>
+          <li><a href="#">W</a></li>
+          <li><a href="#">Tel</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="./app.js"></script>
+  </body>
+</html>
